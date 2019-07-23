@@ -14,7 +14,7 @@ In this tutorial, you will learn how to load the OS onto version 2 (`racecar-uw`
 ### Procedure
 1. Download the car's image and Jetpack from [here](https://drive.google.com/file/d/1M3vloiBwu_n52nJ-2ysJPitrKtezwaBG/view?usp=sharing) onto the Linux host. Uncompress the file.
 2. Connect the Jetson to the Linux host with a micro USB cable. Plug the Jetson into the battery or the power adapter that it came with.
-3. Boot the Jetson into recovery mode by holding down the recovery button (second from the right) and then pressing the power button (rightmost). Release the recovery button after five seconds.
+3. Boot the Jetson into recovery mode by holding down the recovery button (second from the right) and then pressing the power button (rightmost). Make sure to keep holding the recovery button and then release the recovery button after five seconds.
 4. Check that the Jetson has successfully booted into recovery mode by executing the `lsusb` command on the Linux host. If successful,the output will have an entry that contains the string ’NVidia Corp.’
 5. Navigate to the Linux_for_Tegra directory in a terminal on the Linux host.
 6. Begin flashing the image onto the Jetson using the following command:
