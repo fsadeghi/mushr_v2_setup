@@ -22,21 +22,21 @@ In this tutorial, you will learn how to load the OS onto version 2 (`racecar-uw`
 $ sudo ./flash.sh -r jetson-tx2 mmcblk0p1
 ```
 **Note:** it will take a few minutes  
-7. Once the Jetson has finished flashing, plug the mouse and keyboard into the Jetson, and connect the Jetson and monitor with the HDMI cable. Shutdown the Jetson by holding the power button, and then press it again to reboot it.
+7. Once the Jetson has finished flashing, plug the mouse and keyboard into the Jetson, and connect the Jetson and monitor with the HDMI cable. Shutdown the Jetson by holding the power button, and then press it again to reboot it.  
 8. On the Jetson, change the password as appropriate using the `passwd` command. The default password of the robot user is `prl_robot`  
 9. **Optional:** Change the hostname to the name of your car. Open the following files and replace *nugget* with your name:  
-	- `sudo nano /etc/hostname`
-	- `sudo nano /etc/hosts`
-	- `sudo reboot`
+- `sudo nano /etc/hostname`  
+- `sudo nano /etc/hosts`  
+- `sudo reboot`  
 10. Configure the SSD  
-	- Open the **Disks** utility
-	- Click on the icon corresponding to the SSD in the left hand column
-	- Delete any existing partitions in the Volumes table by clicking on the minus icon and following the prompts.
-	- Click the plus icon and enter the name of the partition. Name the partition "JetsonSSD", use the `ext4` format, and utilize the full space on the SSD.
-	- Open the GParted utility and select the SSD (usually `/dev/sda`) device from the GUI’s upper-right drop down list.
-	- Right-click on the new partition again and choose **Format to -> ext4**, click the green checkmark.
-	- Right-click on the new partition and choose **Name Partition**, using "JetsonSSD", and click the gree checkmark.
-    - Add the following line to `/etc/fstab` (with root permissions)
+- Open the **Disks** utility  
+- Click on the icon corresponding to the SSD in the left hand column  
+- Delete any existing partitions in the Volumes table by clicking on the minus icon and following the prompts.  
+- Click the plus icon and enter the name of the partition. Name the partition "JetsonSSD", use the `ext4` format, and utilize the full space on the SSD.  
+- Open the GParted utility and select the SSD (usually `/dev/sda`) device from the GUI’s upper-right drop down list.  
+- Right-click on the new partition again and choose **Format to -> ext4**, click the green checkmark.  
+- Right-click on the new partition and choose **Name Partition**, using "JetsonSSD", and click the gree checkmark.  
+- Add the following line to `/etc/fstab` (with root permissions)  
     ```
     /dev/sda1  /media/robot/JetsonSSD  ext4  defaults  0  2
     ```
